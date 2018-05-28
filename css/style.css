@@ -1,0 +1,112 @@
+/* line 1, ../sass/style.sass */
+body {
+  overflow: hidden;
+  height: 100vh;
+  -webkit-perspective: 1200px;
+     -moz-perspective: 1200px;
+          perspective: 1200px;
+  background: black;
+  -webkit-perspective-origin: 50% 50%;
+     -moz-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 12, ../sass/style.sass */
+body .cubo {
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 200px;
+  height: 200px;
+  display: block;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+/* line 18, ../sass/style.sass */
+body .cubo .cara {
+  width: 196px;
+  height: 196px;
+  border: 2px dashed rgba(255, 255, 255, 0.8);
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+  font-size: 10em;
+  text-align: center;
+  line-height: 196px;
+  font-family: "Verdana";
+}
+/* line 32, ../sass/style.sass */
+body .cubo > div.cara:nth-child(1) {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+     -moz-transform: rotateY(-90deg) translateZ(100px);
+          transform: rotateY(-90deg) translateZ(100px);
+  background: #755ac7;
+}
+/* line 35, ../sass/style.sass */
+body .cubo > div.cara:nth-child(2) {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+     -moz-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+  background: #8d3d15;
+}
+/* line 38, ../sass/style.sass */
+body .cubo > div.cara:nth-child(3) {
+  -webkit-transform: translateZ(100px);
+     -moz-transform: translateZ(100px);
+          transform: translateZ(100px);
+  background: #bc9caa;
+}
+/* line 41, ../sass/style.sass */
+body .cubo > div.cara:nth-child(4) {
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+     -moz-transform: rotateY(180deg) translateZ(100px);
+          transform: rotateY(180deg) translateZ(100px);
+  background: #89727c;
+}
+/* line 44, ../sass/style.sass */
+body .cubo > div.cara:nth-child(5) {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+     -moz-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+  background: #12ede7;
+}
+/* line 47, ../sass/style.sass */
+body .cubo > div.cara:nth-child(6) {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+     -moz-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+  background: #996b0b;
+}
+/* line 54, ../sass/style.sass */
+body .cubo.BlackAndWhite .cara {
+  color: black;
+  border: 2px dashed black;
+}
+/* line 58, ../sass/style.sass */
+body .cubo.BlackAndWhite > div.cara:nth-child(1), body .cubo.BlackAndWhite > div.cara:nth-child(2), body .cubo.BlackAndWhite > div.cara:nth-child(3), body .cubo.BlackAndWhite > div.cara:nth-child(4), body .cubo.BlackAndWhite > div.cara:nth-child(5), body .cubo.BlackAndWhite > div.cara:nth-child(6) {
+  background: #ffffff;
+}

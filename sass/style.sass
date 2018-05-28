@@ -1,0 +1,69 @@
+body
+	overflow: hidden
+	height: 100vh
+	perspective: 1200px
+	background: black
+	perspective-origin: 50% 50%
+	// filter: blur(5px) contrast(5)
+	display: flex
+	flex-flow: row wrap
+	justify-content: center
+	align-items: center
+	.cubo 
+		transform-style: preserve-3d
+		width: 200px
+		height: 200px
+		display: block
+		transition: all 300ms linear
+		.cara
+			width: 196px
+			height: 196px
+			border: 2px dashed rgba(255, 255, 255, 0.8)
+			position: absolute
+			cursor: pointer
+			opacity: 0.5
+			transition: 0.5s
+			color: white
+			font-size: 10em
+			text-align: center
+			line-height: 196px
+			font-family: "Verdana"
+		>div.cara
+			&:nth-child(1)
+				transform: rotateY(-90deg) translateZ(100px)
+				background: #755ac7
+			&:nth-child(2)
+				transform: rotateY(90deg) translateZ(100px)
+				background: #8d3d15
+			&:nth-child(3)
+				transform: translateZ(100px)
+				background: #bc9caa
+			&:nth-child(4)
+				transform: rotateY(180deg) translateZ(100px)
+				background: #89727c
+			&:nth-child(5)
+				transform: rotateX(90deg) translateZ(100px)
+				background: #12ede7
+			&:nth-child(6)
+				transform: rotateX(-90deg) translateZ(100px)
+				background: #996b0b
+
+		//Cambio a Blanco y Negro
+
+		&.BlackAndWhite
+			.cara
+				color: black
+				border: 2px dashed rgba(0, 0, 0, 1)
+			>div.cara
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4),
+				&:nth-child(5),
+				&:nth-child(6)
+					background: #ffffff
+
+
+
+
+		
